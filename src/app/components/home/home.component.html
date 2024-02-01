@@ -1,0 +1,37 @@
+<!-- <p>home works!</p> -->
+<h1>Data Binding Examples</h1>
+<div>
+    <div class="mainHeading">
+        <h2>One Way Binding</h2>
+        <div class="subHeading">
+            <!-- display variable content in html with curly braces -->
+            <h3>Interpolation</h3>
+            <div>
+                <h4>{{title}}</h4>
+                <p>{{description}}</p>
+            </div>
+        </div>
+        <div class="subHeading">
+            <!-- binding (or evaluation): the variable content to the attr of html element using square braces -->
+            <h3>Property Binding</h3>
+            <div>
+                <h4 [innerText]="title"></h4>
+                <p [innerHTML]="description"></p>
+                <label for="search">Search</label> &nbsp;
+                
+                <!-- binding can take away square braces on property and wrap curly braces on var -->
+                <input type="text" id="search" placeholder="{{description.substr(11,20)}}">
+            </div>
+        </div>
+    </div>
+
+    <div class="mainHeading">
+        <h2>Two Way Binding</h2>
+        <label for="title">Enter description</label>
+        <div>
+            <input type="text" #inputEl [(ngModel)] = description>
+        </div>
+        <button (click)="btnClicked(description); ">Submit</button>
+
+    </div>
+</div>

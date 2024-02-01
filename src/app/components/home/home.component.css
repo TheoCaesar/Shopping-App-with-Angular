@@ -1,0 +1,15 @@
+.mainHeading {
+    border: 2px solid rgb(106, 106, 236);
+    padding: 15px;
+    margin: 10px auto;
+}
+
+.subHeading {
+    border: 2px solid salmon;
+    margin: 20px auto;
+}
+
+.mainHeading:nth-child(2) * {
+    margin: 5px;
+    width: 95%;
+}
