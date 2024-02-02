@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Category } from 'src/app/models/category';
+import { Product } from 'src/app/models/product';
+import { categoryData } from 'src/app/static-data/category-data';
+import { productData } from 'src/app/static-data/product-data';
 
 @Component({
   selector: 'app-home',
@@ -6,17 +10,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  title = "Home Component"; //type inference  - define variable
-  description!:string;     //non null assertion - decl variable
-
+  products!: Product[];
+  categories: Category[] = [];
   constructor() { }
+
   ngOnInit(): void {
-    this.description = "Welcome to Teley's Corner Store; your one-stop shop"
+    this.products = productData;
+    this.categories = categoryData;
   }
-  
-  newDesc!:string;
-  btnClicked(data:string) {
-    alert(data);
-    console.log(this.newDesc = this.description);
+
+  getCategoryName(id:number):string {
+    return this.categories.find((category) =>category.id === id) ?.name || "";
   }
+
+  getShortenTitle(title:string):string {
+    return `${title.substring(0, 50)}...`
+  }
+
 }

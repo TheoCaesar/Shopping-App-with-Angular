@@ -1,37 +1,31 @@
 <!-- <p>home works!</p> -->
-<h1>Data Binding Examples</h1>
+<div class="container">
+    <h1>Browse all the products</h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="my-3 p-3 bg-body rounded shadow-sm" style="margin: 0 auto; ">
+                <div class="border-bottom pb-2 mb-0">Category goes here</div>
+                <div class="card" style="width: 18rem;">
+                    <img src="https://photomarketingwizard.com/wp-content/uploads/2018/02/ecommerce-product-photography-25.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">title goes here</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>
+                                    <button class="btn btn-outline-warning btn-sm">View Details</button>
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-outline-success btn-sm">Add to Wishlist</button>
+                            </div>                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+</div>
 <div>
-    <div class="mainHeading">
-        <h2>One Way Binding</h2>
-        <div class="subHeading">
-            <!-- display variable content in html with curly braces -->
-            <h3>Interpolation</h3>
-            <div>
-                <h4>{{title}}</h4>
-                <p>{{description}}</p>
-            </div>
-        </div>
-        <div class="subHeading">
-            <!-- binding (or evaluation): the variable content to the attr of html element using square braces -->
-            <h3>Property Binding</h3>
-            <div>
-                <h4 [innerText]="title"></h4>
-                <p [innerHTML]="description"></p>
-                <label for="search">Search</label> &nbsp;
-                
-                <!-- binding can take away square braces on property and wrap curly braces on var -->
-                <input type="text" id="search" placeholder="{{description.substr(11,20)}}">
-            </div>
-        </div>
-    </div>
-
-    <div class="mainHeading">
-        <h2>Two Way Binding</h2>
-        <label for="title">Enter description</label>
-        <div>
-            <input type="text" #inputEl [(ngModel)] = description>
-        </div>
-        <button (click)="btnClicked(description); ">Submit</button>
-
-    </div>
+    <pre>{{products[0] | json}}</pre>
 </div>
