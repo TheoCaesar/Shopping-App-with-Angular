@@ -15,8 +15,11 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.products = productData;
-    this.categories = categoryData;
+    setTimeout(()=>{
+       this.products = productData;
+      this.categories = categoryData;
+    }, 8000) //mimic API returning data after 8s
+   
   }
 
   getCategoryName(id:number):string {

@@ -2,7 +2,11 @@
 <div class="container">
     <h1>Browse all the products</h1>
     <hr>
-    <div class="row">
+    <!-- display spinner -->
+    <app-spinner></app-spinner>
+    
+    <!-- render products -->
+    <div class="row" *ngIf="products">
         <div class="col-md-3" *ngFor="let product of products;">
             <div class="my-3 p-3 bg-body rounded shadow-sm" style="margin: 0 auto; ">
                 <!-- <div class="border-bottom pb-2 mb-0">Category goes here</div> -->
