@@ -6,17 +6,16 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { SpinnerComponent } from './components/spinner/spinner.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    SpinnerComponent
   ],
   imports: [
-    BrowserModule, CommonModule, FormsModule
+    BrowserModule, SharedModule, CommonModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

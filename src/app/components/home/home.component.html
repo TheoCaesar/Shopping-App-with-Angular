@@ -2,37 +2,5 @@
 <div class="container">
     <h1>Browse all the products</h1>
     <hr>
-    <!-- display spinner -->
-    <app-spinner></app-spinner>
-    
-    <!-- render products -->
-    <div class="row" *ngIf="products">
-        <div class="col-md-3" *ngFor="let product of products;">
-            <div class="my-3 p-3 bg-body rounded shadow-sm" style="margin: 0 auto; ">
-                <!-- <div class="border-bottom pb-2 mb-0">Category goes here</div> -->
-                <div class="border-bottom pb-2 mb-0">{{getCategoryName(product.categoryId)}}</div>
-                <div class="card" style="width: 18rem;">
-                    <ng-template [ngIf]="product.productImages.length">
-                        <img class="card-img-top" [src]="product.productImages[0].base64Image" class="card-img-top" alt="...">
-                    </ng-template>
-                    <!-- <img class="card-img-top" *ngIf="!product.productImages.length" [src]="product.productImages[0].base64Image" class="card-img-top" alt="..."> -->
-                    
-                    <div class="card-body">
-                        <!-- <p class="card-text">title goes here</p> -->
-                        <p class="card-text" [title]="product.name">{{getShortenTitle(product.name)}}</p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p>
-                                    <button class="btn btn-outline-warning btn-sm">View Details</button>
-                                </p>
-                            </div>
-                            <div class="col-md-6">
-                                <button class="btn btn-outline-success btn-sm">Add to Wishlist</button>
-                            </div>                    
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>  
-    </div>
+    <app-products-view></app-products-view>
 </div>
