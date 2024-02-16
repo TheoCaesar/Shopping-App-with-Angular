@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
 import { CategoryService } from './service/category.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { CategoryService } from './service/category.service';
     HomeComponent,
   ],
   imports: [
-    BrowserModule, SharedModule, CommonModule, FormsModule
+    HttpClientModule, BrowserModule, SharedModule, CommonModule, FormsModule
   ],
   
   bootstrap: [AppComponent]

@@ -9,7 +9,7 @@ export const environment:EnvironmentConfiguration = {
   // production: false
   env_name: 'dev',
   production:false,
-  apiUrl:'https://localhost:3000',
+  apiUrl:'http://localhost:3000',
   apiEndpoints: {
     category:'categories',
     product:'product',
