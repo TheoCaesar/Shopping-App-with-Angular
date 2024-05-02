@@ -102,5 +102,10 @@
       }
     }
   },
-  "defaultProject": "myShop"
+  "defaultProject": "myShop",
+  "cli": {
+    "warnings": {
+      "versionMismatch": false
+    }
+  }
 }
